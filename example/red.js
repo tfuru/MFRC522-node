@@ -1,4 +1,4 @@
-var rc522 = require("../rc522.js");
+var mfrc522 = require("../index.js");
 
 var Callback = function(){
   //開始
@@ -16,4 +16,4 @@ var Callback = function(){
     console.log('onExit');
   };
 };
-rc522.start( new Callback() );
+mfrc522.start( new Callback() );

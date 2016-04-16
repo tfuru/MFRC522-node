@@ -1,18 +1,18 @@
-var RC522 = function(){};
+var MFRC522 = function(){};
 
-RC522.prototype.spawn = require('child_process').spawn;
-RC522.prototype.rc522py = null;
-RC522.prototype.callback = null;
-RC522.prototype.uidRegExp = new RegExp("^Card read UID: ([0-9,]+)");
+MFRC522.prototype.spawn = require('child_process').spawn;
+MFRC522.prototype.rc522py = null;
+MFRC522.prototype.callback = null;
+MFRC522.prototype.uidRegExp = new RegExp("^Card read UID: ([0-9,]+)");
 
 /** 読み込み 開始
 */
-RC522.prototype.start = function(callback){
+MFRC522.prototype.start = function(callback){
   //コールバック
   this.callback = callback;
   
   //-u で python 出力バッファリング無し
-  this.rc522py = this.spawn('python', ['-u','./MFRC522-python/Dump.py']);
+  this.rc522py = this.spawn('python', ['-u',__dirname+'/MFRC522-python/Dump.py']);
 
   var _this = this;
   this.rc522py.stdout.on('data', function(data){
@@ -34,4 +34,4 @@ RC522.prototype.start = function(callback){
   _this.callback.onStart();
 };
 
-module.exports = new RC522();
+module.exports = new MFRC522();

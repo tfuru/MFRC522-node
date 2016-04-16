@@ -20,6 +20,10 @@ Raspberry Pi と RFID-RC522 の接続
 
 ## Install
 ```
+npm install MFRC522-node
+```
+
+```
 git clone git@github.com:tfuru/MFRC522-node.git
 git submodule init
 git submodule update
@@ -31,7 +35,7 @@ node example/read.js
 ```
 
 ```
-var rc522 = require("../index.js");
+var rc522 = require("MFRC522-node");
 
 var Callback = function(){
   //開始
