@@ -1,12 +1,28 @@
 # MFRC522-node
 [MFRC522-python](https://github.com/mxgxw/MFRC522-python) を node.js から利用してUIDを取得するためのモジュール
 
+## Require
+[SPI-Py](https://github.com/lthiery/SPI-Py)
+
+## Pins
+Raspberry Pi と RFID-RC522 の接続  
+
+| Name | Pin # | Pin name   |
+|------|-------|------------|
+| SDA  | 24    | GPIO8      |
+| SCK  | 23    | GPIO11     |
+| MOSI | 19    | GPIO10     |
+| MISO | 21    | GPIO9      |
+| IRQ  | None  | None       |
+| GND  | Any   | Any Ground |
+| RST  | 22    | GPIO25     |
+| 3.3V | 1     | 3V3        |
+
 ## Install
 ```
 git clone git@github.com:tfuru/MFRC522-node.git
 git submodule init
 git submodule update
-
 ```
 
 ## Sample
