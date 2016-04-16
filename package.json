@@ -1,8 +1,8 @@
 {
   "name": "MFRC522-node",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
-  "main": "rc522.js",
+  "main": "index.js",
   "directories": {
     "example": "example"
   },
@@ -12,6 +12,6 @@
   "author": "",
   "license": "GPL",
   "dependencies": {
-    
+
   }
 }
