@@ -1,5 +1,5 @@
 # MFRC522-node
-[MFRC522-python](https://github.com/mxgxw/MFRC522-python) を node.js から利用してUIDを取得するためのモジュール
+MFRC522-python を node.js から利用してUIDを取得するためのモジュール  
 
 ## Require
 [SPI-Py](https://github.com/lthiery/SPI-Py)
@@ -31,7 +31,7 @@ node example/read.js
 ```
 
 ```
-var rc522 = require("rc522.js");
+var rc522 = require("../index.js");
 
 var Callback = function(){
   //開始
